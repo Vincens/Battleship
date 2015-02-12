@@ -12,7 +12,7 @@ for (int row=0; row<10; row++){
 
 //firing/hit registration
 String firingcode = greenfoot.ask("Input firing code");
-int Ycode = parseInt(firingcode.substring(1,2));
+int Ycode = parseInt(firingcode.substring(1));
 int Xcode = charToInt(firingcode.substring(0,1));
 
 
