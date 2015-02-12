@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=health
+comment0.target=Ship(int)
+comment1.params=
+comment1.target=void\ hit()
+comment2.params=
+comment2.target=int\ getHealth()
+numComments=3
