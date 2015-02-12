@@ -6,14 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Ship extends Actor
+public class Ship extends Actor
 {
-    /**
-     * Act - do whatever the Ship wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    private int shipHealth;
+    public Ship (int health)
     {
-        // Add your action code here.
-    }    
+        this.shipHealth = health;
+    }
+    public void hit()
+    {
+        this.shipHealth--;
+    }
+    public int getHealth()
+    {
+        return this.shipHealth;
+    }
 }
