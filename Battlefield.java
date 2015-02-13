@@ -17,7 +17,7 @@ public Battlefield()
 
 //firing/hit registration  
 public void attack(){
-    String firingcode = greenfoot.ask("Input firing code");
+    String firingcode = Greenfoot.ask("Input firing code");
     int Ycode = parseInt(firingcode.substring(1)) - 1;
     int Xcode = charToInt(firingcode.substring(0,1));
     checkHit(Xcode, Ycode);
