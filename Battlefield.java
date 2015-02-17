@@ -13,19 +13,29 @@ public class Battlefield extends World
 public Battlefield()
 {    
         super(1008, 1010, 1); 
+        Submarine = new Ship(3);
+        Patrol = new Ship(2);
+        Battleship = new Ship(4);  
+        Carrier = new Ship(5);
+        Destroyer = new Ship(3);
 }
 
-//firing/hit registration  
+//firing/hit registration
+//user inputs firing coordinates, char gets converted to num, array location is called upon
 public void attack(){
     String firingcode = Greenfoot.ask("Input firing code");
     int Ycode = parseInt(firingcode.substring(1)) - 1;
     int Xcode = charToInt(firingcode.substring(0,1));
-    checkHit(Xcode, Ycode);
+    checkLocation(Xcode, Ycode);
 }
 
-//checks coordinates and returns what is at the location
-public void checkHit(int x, int y){
-    
+//checks coordinates for ship
+//returns value at that location
+public void checkLocation(int x, int y){
+    switch (grid[x][y]){
+        case"s":
+            return Submarine;
+    }
 }
 
 //converts char to int
