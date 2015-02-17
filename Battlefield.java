@@ -37,47 +37,52 @@ public void attack(){
     checkLocation(Xcode, Ycode);
 }
 
-//checks coordinates for ship
-//returns value at that location
+//changes array, hits ship, prints result, creates hit and miss objects
 public void checkLocation(int x, int y){
     switch (grid[x][y]){
         case 'e':
             grid[x][y] = 'm';
-            //print miss, change to m, create miss obj in world
+            world.showText("Miss", world.getWidth()/2, getHeight()/2);
+            //create miss obj in world
             break;
         case '"h"'h:
-            //print miss
+            world.showText("Miss", world.getWidth()/2, getHeight()/2);
             break;
         case 'm':
-            //print miss
+            world.showText("Miss", world.getWidth()/2, getHeight()/2);
             break;
         case 's':
             Submarine.hit();
             grid[x][y] = 'h';
-            //print hit, reduce sub hp, change to h, create hit obj in world
+            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            //create hit obj in world
             break;
         case 'b':
             grid[x][y] = 'h';
             Battleship.hit();
-            //print hit, reduce battleship hp, change to h, create hit obj in world
+            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            //create hit obj in world
             break;
         case 'c':
             grid[x][y] = 'h';
             Carrier.hit();
-            //print hit, reduce carrier hp, change to h, create hit obj in world
+            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            //create hit obj in world
             break;
         case 'd':
             grid[x][y] = 'h';
             Destroyer.hit();
-            //print hit, reduce destroyer hp, change to h, create hit obj in world
+            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            //create hit obj in world
             break;
         case 'p':
             grid[x][y] = 'h';
             Patrol.hit();
-            //print hit, reduce patrol boat hp, change to h, create hit obj in world
+            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            //create hit obj in world
             break;
         default:
-            //error
+            world.showText("Error", world.getWidth()/2, getHeight()/2);
             break;
     }
 }
