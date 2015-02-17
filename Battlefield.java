@@ -32,8 +32,9 @@ public void checkHit(int x, int y){
 public int charToInt(String input){
     int output = 0;
     boolean flag = false;
+    char temp = input.toLowerCase()
     while (!flag){
-        switch(input.toLowerCase()) {
+        switch(temp) {
             case "a":
                 output = 0;
                 flag = true;
