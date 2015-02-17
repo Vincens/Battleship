@@ -1,2 +1,4 @@
 # Battleship
-Greenfoot uses Java  6 not java 7 so we can't uses a string for switch case in the battlefield class :( Updated 2/13/15
+2/17/15 4pm
+fixed switch; filled out checkLocation()
+ToDo: get background and visuals working; placement; method inside ship.hit() to check if sunk; create victory parameters; AI;
