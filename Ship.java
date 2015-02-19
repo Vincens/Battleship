@@ -20,7 +20,6 @@ public class Ship extends Actor
         this.shipHealth = health;
         this.owner = player;
     }
-    }
     public void hit()
     {
         this.shipHealth--;
@@ -34,6 +33,5 @@ public class Ship extends Actor
     {
         if (this.shipHealth == 0)
         
-    }
     }
 }
