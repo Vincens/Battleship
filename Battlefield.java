@@ -52,50 +52,80 @@ public void checkLocation(int x, int y){
             grid[x][y] = 'm';
             this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create miss obj in world
             break;
         case 'h':
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 'm':
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 's':
             Submarine.hit();
             grid[x][y] = 'h';
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'b':
             grid[x][y] = 'h';
             Battleship.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'c':
             grid[x][y] = 'h';
             Carrier.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'd':
             grid[x][y] = 'h';
             Destroyer.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'p':
             grid[x][y] = 'h';
             Patrol.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         default:
             this.showText("Error", this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
+            this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
     }
 }
 
+public void checkVictory()
+{
+    if (p1Score == 5){
+        this.showText("Player One wins!", this.getWidth()/2, this.getHeight()/2);
+        Greenfoot.delay(5);
+        Greenfoot.stop();
+    }
+    else if (p2Score == 5){
+        this.showText("Player Two wins!", this.getWidth()/2, this.getHeight()/2);
+        Greenfoot.delay(5);
+        Greenfoot.stop();
+    }
+}
 //converts char to int
 public int charToInt(String input){
     int output = 0;
