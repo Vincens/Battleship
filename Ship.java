@@ -32,7 +32,7 @@ public class Ship extends Actor
     private void checkSunk()
     {
         if (this.shipHealth == 0){
-            
+            incrementScore();
         }
     }
 }
