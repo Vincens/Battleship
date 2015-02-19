@@ -39,7 +39,7 @@ public Battlefield()
 public void attack(){
     String firingcode = Greenfoot.ask("Input firing code");
     int Ycode = Integer.parseInt(firingcode.substring(1)) - 1;
-    int Xcode = charToInt(firingcode.substring(0,1));
+    int Xcode = charToInt(firingcode);
     checkLocation(Xcode, Ycode);
 }
 
@@ -100,7 +100,7 @@ public void checkLocation(int x, int y){
 public int charToInt(String input){
     int output = 0;
     boolean flag = false;
-    char temp = input.toLowerCase();
+    char temp = input.toLowerCase().charAt(0);
     while (!flag){
         switch(temp) {
             case 'a':
