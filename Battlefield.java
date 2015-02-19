@@ -43,47 +43,47 @@ public void checkLocation(int x, int y){
     switch (grid[x][y]){
         case 'e':
             grid[x][y] = 'm';
-            world.showText("Miss", world.getWidth()/2, getHeight()/2);
+            world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
             //create miss obj in world
             break;
         case '"h"'h:
-            world.showText("Miss", world.getWidth()/2, getHeight()/2);
+            world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
             break;
         case 'm':
-            world.showText("Miss", world.getWidth()/2, getHeight()/2);
+            world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
             break;
         case 's':
             Submarine.hit();
             grid[x][y] = 'h';
-            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            world.showText("Hit", world.getWidth()/2, world.getHeight()/2);
             //create hit obj in world
             break;
         case 'b':
             grid[x][y] = 'h';
             Battleship.hit();
-            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            world.showText("Hit", world.getWidth()/2, world.getHeight()/2);
             //create hit obj in world
             break;
         case 'c':
             grid[x][y] = 'h';
             Carrier.hit();
-            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            world.showText("Hit", world.getWidth()/2, world.getHeight()/2);
             //create hit obj in world
             break;
         case 'd':
             grid[x][y] = 'h';
             Destroyer.hit();
-            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            world.showText("Hit", world.getWidth()/2, world.getHeight()/2);
             //create hit obj in world
             break;
         case 'p':
             grid[x][y] = 'h';
             Patrol.hit();
-            world.showText("Hit", world.getWidth()/2, getHeight()/2);
+            world.showText("Hit", world.getWidth()/2, world.getHeight()/2);
             //create hit obj in world
             break;
         default:
-            world.showText("Error", world.getWidth()/2, getHeight()/2);
+            world.showText("Error", world.getWidth()/2, world.getHeight()/2);
             break;
     }
 }
