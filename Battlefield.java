@@ -32,7 +32,7 @@ public Battlefield()
 //user inputs firing coordinates, char gets converted to num, array location is called upon
 public void attack(){
     String firingcode = Greenfoot.ask("Input firing code");
-    int Ycode = parseInt(firingcode.substring(1)) - 1;
+    int Ycode = Integer.parseInt(firingcode.substring(1)) - 1;
     int Xcode = charToInt(firingcode.substring(0,1));
     checkLocation(Xcode, Ycode);
 }
