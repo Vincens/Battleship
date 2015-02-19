@@ -9,15 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Battlefield extends World
 {
 private char[][] grid;
-private int p1Score;
-private int p2score;
+private static int p1Score;
+private static int p2Score;
 Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
 //constructor
 public Battlefield()
 {    
         super(1008, 1010, 1);
         p1Score = 0;
-        p2score = 0;
+        p2Score = 0;
         
         Ship Submarine = new Ship(3);
         Ship Patrol = new Ship(2);

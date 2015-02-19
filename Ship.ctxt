@@ -1,8 +1,12 @@
 #BlueJ class context
 comment0.params=health
 comment0.target=Ship(int)
-comment1.params=
-comment1.target=void\ hit()
+comment1.params=health\ player
+comment1.target=Ship(int,\ int)
 comment2.params=
-comment2.target=int\ getHealth()
-numComments=3
+comment2.target=void\ hit()
+comment3.params=
+comment3.target=int\ getHealth()
+comment4.params=
+comment4.target=void\ checkSunk()
+numComments=5

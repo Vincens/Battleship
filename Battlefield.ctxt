@@ -1,5 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Battlefield()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Grid.\n\ \n
-numComments=1
+comment1.params=
+comment1.target=void\ attack()
+comment2.params=x\ y
+comment2.target=void\ checkLocation(int,\ int)
+comment3.params=input
+comment3.target=int\ charToInt(java.lang.String)
+comment4.params=playerNum
+comment4.target=void\ incrementScore(int)
+comment5.params=
+comment5.target=void\ incrementScore()
+numComments=6
