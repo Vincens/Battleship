@@ -40,7 +40,8 @@ public void attack(){
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
 public void checkLocation(int x, int y){
-    switch (grid[x][y]){
+    char placeholder = grid [x][y];
+    switch (placeholder){
         case 'e':
             grid[x][y] = 'm';
             world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
