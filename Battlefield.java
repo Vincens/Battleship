@@ -158,6 +158,11 @@ public void incrementScore(int playerNum)
         p2Score++;
 }
 
+public void incrementScore()
+{
+    p1Score++;
+}
+
 /* values for char array:
     e empty
     h hit
