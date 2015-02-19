@@ -11,7 +11,7 @@ public class Battlefield extends World
 private char[][] grid;
 private int p1Score;
 private int p2score;
-Ship Submarine, Patrol, Battleship ,Carrier ,Destroyer;
+Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
 //constructor
 public Battlefield()
 {    
