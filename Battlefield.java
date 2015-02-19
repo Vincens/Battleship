@@ -9,10 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Battlefield extends World
 {
 private char[][] grid;
+private p1Score;
+private p2score;
 //constructor
 public Battlefield()
 {    
-        super(1008, 1010, 1); 
+        super(1008, 1010, 1);
+        p1Score = 0;
+        p2score = 0;
+        
         Ship Submarine = new Ship(3);
         Ship Patrol = new Ship(2);
         Ship Battleship = new Ship(4);  
@@ -142,6 +147,15 @@ public int charToInt(String input){
         }
     }
     return output;
+}
+
+public void incrementScore(int playerNum)
+{
+    if (playerNum == 1)
+        p1Score++;
+    else
+    if (playerNum == 2)
+        p2Score++;
 }
 
 /* values for char array:
