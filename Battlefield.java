@@ -18,16 +18,16 @@ public Battlefield()
         Ship Battleship = new Ship(4);  
         Ship Carrier = new Ship(5);
         Ship Destroyer = new Ship(3);
-        
+
         //establish char array for the grid, fill it with 'e' for empty
-        char[] grid = new char[10][10];
-        for (int row=0; row<10; row++){
+        char[][] grid = new char[10][10];
+        for (int row = 0; row < 10; row++){
             for (int column=0; column<10; column++){
-                grid[row][column]== 'e';
-        
+                grid[row][column]= 'e';
+            }
+        }
         //run the placement method to fill grid array with ships based on user input
 }
-
 //firing/hit registration
 //user inputs firing coordinates, char gets converted to num, array location is called upon
 public void attack(){
@@ -46,7 +46,7 @@ public void checkLocation(int x, int y){
             world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
             //create miss obj in world
             break;
-        case '"h"'h:
+        case 'h':
             world.showText("Miss", world.getWidth()/2, world.getHeight()/2);
             break;
         case 'm':
@@ -92,7 +92,7 @@ public void checkLocation(int x, int y){
 public int charToInt(String input){
     int output = 0;
     boolean flag = false;
-    char temp = input.toLowerCase()
+    char temp = input.toLowerCase();
     while (!flag){
         switch(temp) {
             case 'a':
@@ -140,7 +140,7 @@ public int charToInt(String input){
                 break;
         }
     }
-return output;
+    return output;
 }
 
 /* values for char array:
