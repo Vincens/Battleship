@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Battlefield extends World
 {
 private char[][] grid;
-private p1Score;
-private p2score;
+private int p1Score;
+private int p2score;
 //constructor
 public Battlefield()
 {    
