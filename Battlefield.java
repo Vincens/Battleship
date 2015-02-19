@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Battlefield extends World
 {
-
+char[][] grid;
 //constructor
 public Battlefield()
 {    
@@ -20,7 +20,7 @@ public Battlefield()
         Ship Destroyer = new Ship(3);
 
         //establish char array for the grid, fill it with 'e' for empty
-        char[][] grid = new char[10][10];
+        grid = new char[10][10];
         for (int row = 0; row < 10; row++){
             for (int column=0; column<10; column++){
                 grid[row][column]= 'e';
