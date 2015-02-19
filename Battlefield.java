@@ -49,47 +49,48 @@ public void checkLocation(int x, int y){
     switch (placeholder){
         case 'e':
             grid[x][y] = 'm';
-            World.showText("Miss", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
+            Greenfoot.delay(2);
             //create miss obj in world
             break;
         case 'h':
-            World.showText("Miss", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             break;
         case 'm':
-            World.showText("Miss", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             break;
         case 's':
             Submarine.hit();
             grid[x][y] = 'h';
-            World.showText("Hit", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'b':
             grid[x][y] = 'h';
             Battleship.hit();
-            World.showText("Hit", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'c':
             grid[x][y] = 'h';
             Carrier.hit();
-            World.showText("Hit", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'd':
             grid[x][y] = 'h';
             Destroyer.hit();
-            World.showText("Hit", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'p':
             grid[x][y] = 'h';
             Patrol.hit();
-            World.showText("Hit", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         default:
-            World.showText("Error", World.getWidth()/2, World.getHeight()/2);
+            this.showText("Error", this.getWidth()/2, this.getHeight()/2);
             break;
     }
 }
@@ -149,7 +150,7 @@ public int charToInt(String input){
     return output;
 }
 
-public void incrementScore(int playerNum)
+public static void incrementScore(int playerNum)
 {
     if (playerNum == 1)
         p1Score++;
@@ -158,7 +159,7 @@ public void incrementScore(int playerNum)
         p2Score++;
 }
 
-public void incrementScore()
+public static void incrementScore()
 {
     p1Score++;
 }
