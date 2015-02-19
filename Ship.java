@@ -29,12 +29,11 @@ public class Ship extends Actor
     {
         return this.shipHealth;
     }
-    private boolean checkSunk()
+    private void checkSunk()
     {
         if (this.shipHealth == 0){
             
         }
-        return false;
     }
 }
 
