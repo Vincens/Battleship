@@ -15,24 +15,37 @@ public class Ship extends Actor
         this.shipHealth = health;
         this.owner = 1;
     }
+    
     public Ship (int health, int player)
     {
         this.shipHealth = health;
         this.owner = player;
     }
+      
+    public void placement()
+    {
+        String endpt1 = Greenfoot.ask("Input coordinate: ");
+        int Ycode = Integer.parseInt(endpt1.substring(1)) - 1;
+        int Xcode = Battlefield.charToInt(endpt1);
+        
+    }
+    
     public void hit()
     {
         this.shipHealth--;
         checkSunk();
     }
+    
     public int getHealth()
     {
         return this.shipHealth;
     }
+    
     private void checkSunk()
     {
         if (this.shipHealth == 0)
             Battlefield.incrementScore();
     }
+    
 }
 
