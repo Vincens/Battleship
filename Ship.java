@@ -6,10 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @PeterB BenL
  * @1.0
  */
+ 
 public class Ship extends Actor
 {
     private int shipHealth;
     private int owner;
+    private static String endpt1;
     public Ship (int health)
     {
         this.shipHealth = health;
@@ -24,7 +26,7 @@ public class Ship extends Actor
       
     public void placement()
     {
-        String endpt1 = Greenfoot.ask("Input coordinate: ");
+        endpt1 = Greenfoot.ask("Input coordinate: ");
         int Ycode = Integer.parseInt(endpt1.substring(1)) - 1;
         int Xcode = Battlefield.charToInt(endpt1);
         
