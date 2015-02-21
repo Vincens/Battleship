@@ -127,7 +127,7 @@ public void checkVictory()
     }
 }
 //converts char to int
-public int charToInt(String input){
+public static int charToInt(String input){
     int output = 0;
     boolean flag = false;
     char temp = input.toLowerCase().charAt(0);
