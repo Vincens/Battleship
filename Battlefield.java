@@ -15,7 +15,7 @@ Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
 //constructor
 public Battlefield()
 {    
-        super(800, 800, 1);
+        super(1200, 700, 1);
         p1Score = 0;
         p2Score = 0;
         
