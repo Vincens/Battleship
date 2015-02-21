@@ -12,11 +12,11 @@ private char[][] grid;
 private static int p1Score;
 private static int p2Score;
 Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
-GreenfootImage backg = new GreenfootImage("Hopefully final background.png");
 //constructor
 public Battlefield()
 {    
-        super(1200, 700, 1);
+        super(1494, 747, 1);
+        GreenfootImage backg = new GreenfootImage("Background.png");
         setBackground(backg);
         p1Score = 0;
         p2Score = 0;
