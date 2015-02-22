@@ -124,6 +124,39 @@ public void checkLocation(int x, int y){
     }
 }
 
+//returns true if the ship will run off the edge of the grid
+//called on in placement() in ship class
+public boolean checkBoundaries(int direction, int x, int y, int length)
+{
+    switch (direction){
+        case 0:
+            if (y + length > 10)
+            return false;
+            else return true;
+            break;
+        case 1:
+            if (x + length > 10)
+            return false;
+            else return true;
+            break;
+        case 2:
+            if (y - length < 0)
+            return false;
+            else return true;
+            break;
+        case 3:
+            if (x - length < 0)
+            return false;
+            else return true;
+            break;
+        default:
+            return false;
+            break;
+        
+    }
+}
+
+//called on in checkSunk() in ship class
 public void checkVictory()
 {
     if (p1Score == 5){
