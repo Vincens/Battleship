@@ -40,6 +40,7 @@ public class Ship extends Actor
         int orientation = 0;
         // 0=up 1=right 2=down 3=left
         //rotate left and right by 90 degrees until position is set with enter
+        
         while (!Greenfoot.isKeyDown("enter")){
             if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
                 orientation--;
@@ -54,7 +55,27 @@ public class Ship extends Actor
                 arrow.turn(90);
             }
         }
-        
+        //fills grid1 array with type elements at the location of the ship
+        switch (orientation){
+            case 0:
+                for (int t = 0; t < this.shipHealth; t++)
+                Battlefield.setGrid(1, Xcode, Ycode + t, type);
+                break;
+            case 1:
+                for (int t = 0; t < this.shipHealth; t++)
+                Battlefield.setGrid(1, Xcode + t, Ycode, type);
+                break;
+            case 2:
+                for (int t = 0; t < this.shipHealth; t++)
+                Battlefield.setGrid(1, Xcode, Ycode - t, type);
+                break;
+            case 3:
+                for (int t = 0; t < this.shipHealth; t++)
+                Battlefield.setGrid(1, Xcode - t, Ycode, type);
+                break;
+            default:
+                break;
+        }
     }
     
     public void hit()
