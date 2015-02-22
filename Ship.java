@@ -16,12 +16,16 @@ public class Ship extends Actor
     {
         this.shipHealth = health;
         this.owner = 1;
+        GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
+        this.setImage(Ship);
     }
     
     public Ship (int health, int player)
     {
         this.shipHealth = health;
         this.owner = player;
+        GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
+        this.setImage(Ship);
     }
       
     public void placement()

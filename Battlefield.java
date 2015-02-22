@@ -206,10 +206,11 @@ public static void incrementScore()
     p1Score++;
 }
 // Going to start off with random placement and see where that goes
+//I DON"T THINK WE CAN DO THIS IS THE WORLD CLASS, WE NEED TO DO IT IN THE ACTOR CLASS
 public void placement()
 {
-    GreenfootImage Ship = new GreenfootImage();
-    GreenfootImage backg = new GreenfootImage();
+    //GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
+    //GreenfootImage backg = new GreenfootImage();
 }
 /* values for char array:
     e empty
