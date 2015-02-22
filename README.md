@@ -4,7 +4,5 @@ Everything complied 2/19/15
 ToDo: get background and visuals working; placement; AI; Set up for two players;
 Need an image for each ship
 
-# UPDATE 2/22/15 @1:33
-I worked on a placement method, and cretaed a method that creates the grid full of 'e's. We need
-to work the user input for placement, which there is a basic method for. Right now we are using a wonderful black
-box for a ship placeholder. I will be at robotics until 7:30 but I am will to work after that tonight. If you ever have any questions however, I will have my phone with me. We also need to make a method for choosing what grid is being referenced by which method. That is all.
+Updated 2/22/15 3:30
+I finished the placement method I had made and deleted yours. Lots of check and set methods. Placement almost done. Had to take a break b/c brain overheated. Soon just visuals, and two player. IDK if we want to create AI or if we want to go down the path of two player. I have a good idea of how to create the AI but there is one small glitch I need to get rid of to make it less predicatable. Will get back on tonight, hopefully we can work on it together.
