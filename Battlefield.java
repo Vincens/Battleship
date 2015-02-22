@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Battlefield extends World
 {
-private char[][] grid;
+private char[][] grid1;
+private char[][] grid2;
 private static int p1Score;
 private static int p2Score;
 Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
@@ -26,15 +27,23 @@ public Battlefield()
         Ship Battleship = new Ship(4);  
         Ship Carrier = new Ship(5);
         Ship Destroyer = new Ship(3);
-
-        //establish char array for the grid, fill it with 'e' for empty
-        grid = new char[10][10];
-        for (int row = 0; row < 10; row++){
-            for (int column=0; column<10; column++){
-                grid[row][column]= 'e';
-            }
-        }
+        
+        grid1 = createGrid();
+        grid2 = createGrid();
         //run the placement method to fill grid array with ships based on user input
+}
+//method for creating the array, so we can call it twice
+public char[][] createGrid()
+{
+    //establish char array for the grid, fill it with 'e' for empty
+    char[][] grid;
+    grid = new char[10][10];
+    for (int row = 0; row < 10; row++){
+        for (int column=0; column<10; column++){
+            grid[row][column]= 'e';
+        }
+    }
+    return grid;
 }
 //firing/hit registration
 //user inputs firing coordinates, char gets converted to num, array location is called upon
@@ -47,7 +56,7 @@ public void attack(){
 
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
-public void checkLocation(int x, int y){
+public void checkLocation(int x, int y, int gridNum){
     char placeholder = grid [x][y];
     switch (placeholder){
         case 'e':
@@ -196,7 +205,10 @@ public static void incrementScore()
 {
     p1Score++;
 }
-
+public void placement()
+{
+    
+}
 /* values for char array:
     e empty
     h hit
