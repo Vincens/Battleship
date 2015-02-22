@@ -76,6 +76,8 @@ public class Ship extends Actor
             default:
                 break;
         }
+        //_____ need to create the actual ship image at the proper location
+        //maybe find endpt2 then create image at midpt?
     }
     
     public void hit()
