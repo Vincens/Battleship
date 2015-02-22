@@ -209,7 +209,7 @@ public static void incrementScore()
 //I DON"T THINK WE CAN DO THIS IS THE WORLD CLASS, WE NEED TO DO IT IN THE ACTOR CLASS
 public void placement()
 {
-    this.addObject(Submarine, 100, 50);
+    addObject(new Ship(4), 100, 50);
 }
 /* values for char array:
     e empty
