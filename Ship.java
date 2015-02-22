@@ -41,7 +41,7 @@ public class Ship extends Actor
         // 0=up 1=right 2=down 3=left
         //rotate left and right by 90 degrees until position is set with enter
         
-        while (!Greenfoot.isKeyDown("enter")){
+        while (!Greenfoot.isKeyDown("enter")){//needs to check for collisions and check boundaries
             if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
                 orientation--;
                 if (orientation < 0)
