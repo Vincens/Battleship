@@ -205,12 +205,17 @@ public static void incrementScore()
 {
     p1Score++;
 }
-// Going to start off with random placement and see where that goes
-//I DON"T THINK WE CAN DO THIS IS THE WORLD CLASS, WE NEED TO DO IT IN THE ACTOR CLASS
-public void placement()
+
+//sets grid element
+//called in placement method of ship class
+public static void setGrid(int gridNum, int x, int y, char fill)
 {
-    addObject(new Ship(4), 100, 50);
+    if (gridNum == 1)
+        grid1[x][y] = fill;
+    if (gridNum == )
+        grid2[x][y] = fill;
 }
+
 /* values for char array:
     e empty
     h hit
