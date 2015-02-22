@@ -56,11 +56,11 @@ public void attack(){
 
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
-public void checkLocation(int x, int y, int gridNum){
-    char placeholder = grid [x][y];
+public void checkLocation(int x, int y){
+    char placeholder = grid1 [x][y];
     switch (placeholder){
         case 'e':
-            grid[x][y] = 'm';
+            grid1[x][y] = 'm';
             this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
@@ -78,14 +78,14 @@ public void checkLocation(int x, int y, int gridNum){
             break;
         case 's':
             Submarine.hit();
-            grid[x][y] = 'h';
+            grid1[x][y] = 'h';
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'b':
-            grid[x][y] = 'h';
+            grid1[x][y] = 'h';
             Battleship.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
@@ -93,7 +93,7 @@ public void checkLocation(int x, int y, int gridNum){
             //create hit obj in world
             break;
         case 'c':
-            grid[x][y] = 'h';
+            grid1[x][y] = 'h';
             Carrier.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
@@ -101,7 +101,7 @@ public void checkLocation(int x, int y, int gridNum){
             //create hit obj in world
             break;
         case 'd':
-            grid[x][y] = 'h';
+            grid1[x][y] = 'h';
             Destroyer.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
@@ -109,7 +109,7 @@ public void checkLocation(int x, int y, int gridNum){
             //create hit obj in world
             break;
         case 'p':
-            grid[x][y] = 'h';
+            grid1[x][y] = 'h';
             Patrol.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(2);
