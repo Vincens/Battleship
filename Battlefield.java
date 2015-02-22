@@ -209,8 +209,7 @@ public static void incrementScore()
 //I DON"T THINK WE CAN DO THIS IS THE WORLD CLASS, WE NEED TO DO IT IN THE ACTOR CLASS
 public void placement()
 {
-    //GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
-    //GreenfootImage backg = new GreenfootImage();
+    this.addObject(Submarine, 100, 50);
 }
 /* values for char array:
     e empty
