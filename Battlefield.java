@@ -205,9 +205,11 @@ public static void incrementScore()
 {
     p1Score++;
 }
+// Going to start off with random placement and see where that goes
 public void placement()
 {
-    
+    GreenfootImage Ship = new GreenfootImage();
+    GreenfootImage backg = new GreenfootImage();
 }
 /* values for char array:
     e empty
