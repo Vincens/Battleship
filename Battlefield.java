@@ -22,11 +22,11 @@ public Battlefield()
         p1Score = 0;
         p2Score = 0;
         
-        Ship Submarine = new Ship(3, 's');
-        Ship Patrol = new Ship(2, 'p');
-        Ship Battleship = new Ship(4, 'b');  
-        Ship Carrier = new Ship(5, 'c');
-        Ship Destroyer = new Ship(3, 'd');
+        Submarine = new Ship(3, 's');
+        Patrol = new Ship(2, 'p');
+        Battleship = new Ship(4, 'b');  
+        Carrier = new Ship(5, 'c');
+        Destroyer = new Ship(3, 'd');
         
         grid1 = createGrid();
         grid2 = createGrid();
