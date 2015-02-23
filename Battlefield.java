@@ -34,8 +34,7 @@ public Battlefield()
 }
 public void playGame()
 {
-    this.showText("Please place the submarine (3x1",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(2);
+    this.showText("Please place the submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
     Submarine.placement();
     Patrol.placement();
     Battleship.placement();
