@@ -12,7 +12,6 @@ private static char[][] grid1;
 private static  char[][] grid2;
 private static int p1Score;
 private static int p2Score;
-Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
 //constructor
 public Battlefield()
 {    
@@ -22,11 +21,11 @@ public Battlefield()
         p1Score = 0;
         p2Score = 0;
         
-        Submarine = new Ship(3, 's');
-        Patrol = new Ship(2, 'p');
-        Battleship = new Ship(4, 'b');  
-        Carrier = new Ship(5, 'c');
-        Destroyer = new Ship(3, 'd');
+        Ship Submarine = new Ship(3, 's');
+        Ship Patrol = new Ship(2, 'p');
+        Ship Battleship = new Ship(4, 'b');  
+        Ship Carrier = new Ship(5, 'c');
+        Ship Destroyer = new Ship(3, 'd');
         
         grid1 = createGrid();
         grid2 = createGrid();
