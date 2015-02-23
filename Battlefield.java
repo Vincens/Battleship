@@ -34,7 +34,7 @@ public Battlefield()
 }
 public void playGame()
 {
-    this.showText("Please place the submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
+    System.out.println("Place a submarine (3x1)");
     Submarine.placement();
     Patrol.placement();
     Battleship.placement();
