@@ -131,26 +131,31 @@ public boolean checkBoundaries(int direction, int x, int y, int length)
     switch (direction){
         case 0:
             if (y + length > 10)
-            return false;
-            else return true;
+                return false;
+            else 
+                return true;
             break;
+        
         case 1:
             if (x + length > 10)
-            return false;
-            else return true;
+                return false;
+            else 
+                return true;
             break;
         case 2:
             if (y - length < 0)
-            return false;
-            else return true;
+                return false;
+            else 
+                return true;
             break;
         case 3:
             if (x - length < 0)
-            return false;
-            else return true;
+                return false;
+            else 
+                return true;
             break;
         default:
-            return false;
+                return false;
             break;
         
     }
