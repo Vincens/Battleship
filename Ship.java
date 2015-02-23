@@ -11,7 +11,7 @@ public class Ship extends Actor
 {
     private int shipHealth; // i.e. length of ship
     private int owner;
-    private static String endpt1;
+    private String endpt1;
     private char type; //will fill the array at ship's location
     public Ship (int health, char shiptype)
     {
