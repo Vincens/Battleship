@@ -24,14 +24,7 @@ public Battlefield()
         GreenfootImage backg = new GreenfootImage("Background2.png");
         setBackground(backg);
         p1Score = 0;
-        p2Score = 0;
-        
-        Ship Submarine = new Ship(3, 's');
-        Ship Patrol = new Ship(2, 'p');
-        Ship Battleship = new Ship(4, 'b');  
-        Ship Carrier = new Ship(5, 'c');
-        Ship Destroyer = new Ship(3, 'd');
-        
+        p2Score = 0;        
         grid1 = createGrid();
         grid2 = createGrid();
         //run the placement method to fill grid array with ships based on user input
