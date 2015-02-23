@@ -40,19 +40,20 @@ public class Ship extends Actor
         int orientation = 0;
         // 0=up 1=right 2=down 3=left
         //rotate left and right by 90 degrees until position is set with enter
-        
+        GreenfootImage arrow = new GreenfootImage("black-arrow-md.png");
+        this.setImage(arrow);
         while (!Greenfoot.isKeyDown("enter")){//needs to check for collisions and check boundaries
             if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
                 orientation--;
                 if (orientation < 0)
                     orientation = 3;
-                Arrow.turn(-90);
+                arrow.rotate(-90);
             }
             if (Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")){
                 orientation++;
                 if (orientation > 3)
                     orientation = 0;
-                arrow.turn(90);
+                arrow.rotate(90);
             }
         }
         //fills grid1 array with type elements at the location of the ship

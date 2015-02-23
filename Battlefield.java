@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Battlefield extends World
 {
-private char[][] grid1;
-private char[][] grid2;
+private static char[][] grid1;
+private static  char[][] grid2;
 private static int p1Score;
 private static int p2Score;
 Ship Submarine, Patrol, Battleship , Carrier , Destroyer;
