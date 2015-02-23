@@ -32,6 +32,16 @@ public Battlefield()
         grid2 = createGrid();
         //run the placement method to fill grid array with ships based on user input
 }
+public void playGame()
+{
+    this.showText("Please place the submarine (3x1",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(2);
+    Submarine.placement();
+    Patrol.placement();
+    Battleship.placement();
+    Carrier.placement();
+    Destroyer.placement();
+}
 //method for creating the array, so we can call it twice
 public char[][] createGrid()
 {
@@ -123,7 +133,7 @@ public void checkLocation(int x, int y){
             break;
     }
 }
-
+/**
 //returns true if the ship will run off the edge of the grid
 //called on in placement() in ship class
 public boolean checkBoundaries(int direction, int x, int y, int length)
@@ -131,28 +141,28 @@ public boolean checkBoundaries(int direction, int x, int y, int length)
     switch (direction){
         case 0:
             if (y + length > 10)
-                return false;
-            else 
                 return true;
+            else
+                return false;
             break;
         
         case 1:
             if (x + length > 10)
-                return false;
-            else 
                 return true;
+            else 
+                return false;
             break;
         case 2:
             if (y - length < 0)
-                return false;
-            else 
                 return true;
+            else 
+                return false;
             break;
         case 3:
             if (x - length < 0)
-                return false;
-            else 
                 return true;
+            else 
+                return false;
             break;
         default:
                 return false;
@@ -184,7 +194,7 @@ public boolean checkOverlap(int direction, int x, int y, int length)
         
     }
 }
-
+**/
 //called on in checkSunk() in ship class
 public void checkVictory()
 {
