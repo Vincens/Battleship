@@ -269,7 +269,7 @@ public static void setGrid(int gridNum, int x, int y, char fill)
 {
     if (gridNum == 1)
         grid1[x][y] = fill;
-    if (gridNum == )
+    if (gridNum == 2)
         grid2[x][y] = fill;
 }
 

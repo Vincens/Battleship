@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Feb 22 12:23:42 EST 2015
+#Sun Feb 22 19:42:33 EST 2015
 class.Battlefield.superclass=greenfoot.World
 target2.naviview.expanded=true
 target2.name=Battlefield
@@ -39,7 +39,7 @@ world.lastInstantiated=Battlefield
 dependency1.type=UsesDependency
 target2.editor.y=23
 version=2.7.0
-target2.editor.x=311
+target2.editor.x=255
 package.numDependencies=2
 project.charset=UTF-8
 target2.editor.width=900

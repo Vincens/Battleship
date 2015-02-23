@@ -46,7 +46,7 @@ public class Ship extends Actor
                 orientation--;
                 if (orientation < 0)
                     orientation = 3;
-                arrow.turn(-90);
+                Arrow.turn(-90);
             }
             if (Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")){
                 orientation++;
