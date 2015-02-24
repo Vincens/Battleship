@@ -8,7 +8,6 @@ import greenfoot.*;
 public class AI
 {
     //mode for AI to search for a new ship
-   //picks 10 random potential shots. Uses primitive probability density algorithms to determine best shot to take
    public void seek()
    {
        
