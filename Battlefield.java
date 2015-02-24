@@ -29,19 +29,19 @@ public Battlefield()
 public void playGame()
 {
     this.showText("Please place a Submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(10);
+    Greenfoot.delay(15);
     Submarine.placement();
     this.showText("Please place a Patrol (2x1)",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(10);
+    Greenfoot.delay(15);
     Patrol.placement();
     this.showText("Please place a Battleship (4x1)",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(10);
+    Greenfoot.delay(15);
     Battleship.placement();
     this.showText("Please place a Carrier (5x1)",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(10);
+    Greenfoot.delay(15);
     Carrier.placement();
     this.showText("Please place a Destroyer (3x1)",this.getWidth()/2, this.getHeight()/2);
-    Greenfoot.delay(10);
+    Greenfoot.delay(15);
     Destroyer.placement();
     this.showText("",this.getWidth()/2, this.getHeight()/2);
     for (int y = 0; y< 10; y++){
@@ -181,7 +181,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
     switch (direction){
         case 0://up
             for (int t = 0; t<length; t++){
-                if (grid1[y+t][x] != 'e'){
+                if (grid1[y-t][x] != 'e'){
                     result = true;
                 }
              }
@@ -195,7 +195,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
             return result;
         case 2://down
             for (int t = 0; t<length; t++){
-                if (grid1[y-t][x] != 'e'){
+                if (grid1[y+t][x] != 'e'){
                     result = true;
                 }
              }
