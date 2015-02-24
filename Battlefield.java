@@ -46,6 +46,7 @@ public void playGame()
     this.showText("Please place a Destroyer (3x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Destroyer.placement();
+    this.showText("",this.getWidth()/2, this.getHeight()/2);
 }
 //method for creating the array, so we can call it twice
 public char[][] createGrid()
