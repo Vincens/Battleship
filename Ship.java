@@ -60,11 +60,13 @@ public class Ship extends Actor
             input = Greenfoot.ask("Out of Bounds, please reinput orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
             orientation = Integer.parseInt(input);
         }
+        /**
         //ensure no ships overlap
         while (Battlefield.checkOverlap(orientation, Xcode, Ycode, this.shipLength)){
             input = Greenfoot.ask("Overlap, please reinput orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
             orientation = Integer.parseInt(input);
         }
+        **/
         //fills grid1 array with type elements at the location of the ship
         switch (orientation){
             case 0:
@@ -107,8 +109,11 @@ public class Ship extends Actor
     private void checkSunk()
     {
         if (this.shipHealth == 0)
+        {
             this.sunk = true;
             Battlefield.incrementScore();
+        }
+        
     }
     
     private int placeX()

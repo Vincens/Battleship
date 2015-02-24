@@ -16,7 +16,7 @@ public Ship Submarine, Patrol, Battleship, Carrier, Destroyer;
 //constructor
 public Battlefield()
 {    
-        super(1200, 600, 1);
+        super(600, 600, 1);
         GreenfootImage backg = new GreenfootImage("Background2.png");
         setBackground(backg);
         p1Score = 0;
@@ -44,12 +44,7 @@ public void playGame()
     Greenfoot.delay(15);
     Destroyer.placement();
     this.showText("",this.getWidth()/2, this.getHeight()/2);
-    for (int y = 0; y< 10; y++){
-        for (int x=0; x<10; x++){
-            if (grid1[y][x] != 'e')
-                addObject(new Square(), (81 + 54*x), (81 + 55*y));
-        }
-    }
+    showShips();
 }
 //method for creating the array, so we can call it twice
 public char[][] createGrid()
@@ -71,73 +66,86 @@ public void attack(){
     int Ycode = Integer.parseInt(firingcode.substring(1)) - 1;
     int Xcode = charToInt(firingcode);
     checkLocation(Xcode, Ycode);
+    for (int y = 0; y< 10; y++){
+        for (int x=0; x<10; x++){
+            if (grid1[y][x] == 'm')
+                addObject(new Miss(), (81 + 54*y), (81 + 55*x));
+        }
+    }
+    for (int y = 0; y< 10; y++){
+        for (int x=0; x<10; x++){
+            if (grid1[y][x] == 'h')
+                addObject(new Hit(), (81 + 54*y), (81 + 55*x));
+        }
+    }
+    checkVictory();
 }
 
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
 public void checkLocation(int x, int y){
-    char placeholder = grid1 [x][y];
+    char placeholder = grid1 [y][x];
     switch (placeholder){
         case 'e':
-            grid1[x][y] = 'm';
+            grid1[y][x] = 'm';
             this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create miss obj in world
             break;
         case 'h':
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 'm':
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 's':
             Submarine.hit();
-            grid1[x][y] = 'h';
+            grid1[y][x] = 'h';
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'b':
-            grid1[x][y] = 'h';
+            grid1[y][x] = 'h';
             Battleship.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'c':
-            grid1[x][y] = 'h';
+            grid1[y][x] = 'h';
             Carrier.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'd':
-            grid1[x][y] = 'h';
+            grid1[y][x] = 'h';
             Destroyer.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         case 'p':
-            grid1[x][y] = 'h';
+            grid1[y][x] = 'h';
             Patrol.hit();
             this.showText("Hit", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create hit obj in world
             break;
         default:
             this.showText("Error", this.getWidth()/2, this.getHeight()/2);
-            Greenfoot.delay(2);
+            Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
     }
@@ -175,6 +183,7 @@ public static boolean checkBoundaries(int direction, int x, int y, int length)
 }
 //checks grid array where ship will be placed to check for existing ships
 //returns true if overlap exists
+/**
 public static boolean checkOverlap(int direction, int x, int y, int length)
 {
     boolean result = false;
@@ -216,18 +225,18 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
         
     }
 }
-
+**/
 //called on in checkSunk() in ship class
 public void checkVictory()
 {
     if (p1Score == 5){
-        this.showText("Player One wins!", this.getWidth()/2, this.getHeight()/2);
-        Greenfoot.delay(5);
+        this.showText("You Won!", this.getWidth()/2, this.getHeight()/2);
+        Greenfoot.delay(20);
         Greenfoot.stop();
     }
     else if (p2Score == 5){
         this.showText("Player Two wins!", this.getWidth()/2, this.getHeight()/2);
-        Greenfoot.delay(5);
+        Greenfoot.delay(20);
         Greenfoot.stop();
     }
 }
@@ -336,11 +345,15 @@ private void displayShips()
     Battleship = new Ship(4, 'b');
     Carrier = new Ship(5, 'c');
     Destroyer = new Ship(3, 'd');
-    addObject(Submarine, 82, 300);
-    addObject(Patrol, 136, 300);
-    addObject(Battleship, 190, 300);
-    addObject(Carrier, 244, 300);
-    addObject(Destroyer, 298, 300);
+}
+private void showShips()
+{
+    for (int y = 0; y< 10; y++){
+        for (int x=0; x<10; x++){
+            if (grid1[y][x] != 'e')
+                addObject(new Square(), (81 + 54*y), (81 + 55*x));
+        }
+    }
 }
 /* values for char array:
     e empty
