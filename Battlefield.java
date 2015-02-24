@@ -34,7 +34,6 @@ public void playGame()
     this.showText("Please place a Patrol (2x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Patrol.placement();
-    /**
     this.showText("Please place a Battleship (4x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Battleship.placement();
@@ -45,7 +44,12 @@ public void playGame()
     Greenfoot.delay(10);
     Destroyer.placement();
     this.showText("",this.getWidth()/2, this.getHeight()/2);
-    **/
+    for (int y = 0; y< 10; y++){
+        for (int x=0; x<10; x++){
+            if (grid1[y][x] != 'e')
+                addObject(new Square(), (81 + 54*x), (81 + 55*y));
+        }
+    }
 }
 //method for creating the array, so we can call it twice
 public char[][] createGrid()
@@ -53,9 +57,9 @@ public char[][] createGrid()
     //establish char array for the grid, fill it with 'e' for empty
     char[][] grid;
     grid = new char[10][10];
-    for (int row = 0; row < 10; row++){
-        for (int column=0; column<10; column++){
-            grid[row][column]= 'e';
+    for (int y = 0; y < 10; y++){
+        for (int x=0; x<10; x++){
+            grid[y][x]= 'e';
         }
     }
     return grid;
@@ -320,10 +324,10 @@ private void displayShips()
     Carrier = new Ship(5, 'c');
     Destroyer = new Ship(3, 'd');
     addObject(Submarine, 82, 300);
-    addObject(Patrol, 132, 300);
-    addObject(Battleship, 182, 300);
-    addObject(Carrier, 232, 300);
-    addObject(Destroyer, 282, 300);
+    addObject(Patrol, 136, 300);
+    addObject(Battleship, 190, 300);
+    addObject(Carrier, 244, 300);
+    addObject(Destroyer, 298, 300);
 }
 /* values for char array:
     e empty
