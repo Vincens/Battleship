@@ -9,22 +9,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  
 public class Ship extends Actor
 {
-    private int shipHealth; // i.e. length of ship
+    private int shipHealth; // i.e. number of unhit squares in the ship
+    private int shipLength;
     private int owner;
     private String endpt1;
     private char type; //will fill the array at ship's location
-    public Ship (int health, char shiptype)
+    public Ship (int length, char shiptype)
     {
-        this.shipHealth = health;
+        this.shipLength = length;
+        this.shipHealth = length;
         this.owner = 1;
         this.type = shiptype;
         GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
         this.setImage(Ship);
     }
     
-    public Ship (int health, int player, char shiptype)
+    public Ship (int length, int player, char shiptype)
     {
-        this.shipHealth = health;
+        this.shipLength = length;
+        this.shipHealth = length;
         this.type = shiptype;
         this.owner = player;
         GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
