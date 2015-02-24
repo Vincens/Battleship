@@ -301,11 +301,12 @@ public void printGrid()
 }
 private void displayShips()
 {
-    Submarine = new Ship(3, 1, 's', 50, 300);
-    Patrol = new Ship(2, 1, 'p', 110, 300);
-    Battleship = new Ship(4, 1, 'b', 170, 300);  
-    Carrier = new Ship(5, 1, 'c', 230, 300);
-    Destroyer = new Ship(3, 1, 'd' , 290, 300);   
+    Submarine = new Ship(3,'s');
+    Patrol = new Ship(2, 'p');
+    Battleship = new Ship(4, 'b');  
+    Carrier = new Ship(5, 'c');
+    Destroyer = new Ship(3, 'd');
+    addObject(Submarine, 60, 300);
 }
 /* values for char array:
     e empty
