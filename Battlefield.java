@@ -26,6 +26,7 @@ public Battlefield()
         displayShips();
         //run the placement method to fill grid array with ships based on user input
 }
+//method used to play the game
 public void playGame()
 {
     this.showText("Please place a Submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
@@ -231,7 +232,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
     }
 }
 **/
-//called on in checkSunk() in ship class
+//called on in checkSunk() in ship class, checks if victory happens
 public void checkVictory()
 {
     if (p1Score == 5){
@@ -309,12 +310,10 @@ public static void incrementScore(int playerNum)
     if (playerNum == 2)
         p2Score++;
 }
-
 public static void incrementScore()
 {
     p1Score++;
 }
-
 //sets grid element
 //called in placement method of ship class
 public static void setGrid(int gridNum, int y, int x, char fill)

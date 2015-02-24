@@ -17,6 +17,7 @@ public class Ship extends Actor
     private char type; //will fill the array at ship's location
     private int Ycode, Xcode;
     private int orientation;
+    //constructor
     public Ship (int length, char shiptype)
     {
         this.shipLength = length;
@@ -38,7 +39,7 @@ public class Ship extends Actor
         this.setImage(Ship);
         this.sunk = false;
     }
-      
+     //Method used for placement of each of the ships
     public void placement()
     {
         endpt1 = Greenfoot.ask("Input coordinate: ");
@@ -116,7 +117,7 @@ public class Ship extends Actor
         }
         
     }
-    
+    //
     private int placeX()
     {
         return (81 + 54*Xcode);
