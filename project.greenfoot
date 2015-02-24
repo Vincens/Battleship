@@ -1,7 +1,7 @@
 #Greenfoot properties
-#Mon Feb 23 20:11:49 EST 2015
+#Mon Feb 23 20:55:45 EST 2015
 target3.editor.y=23
-target3.editor.x=242
+target3.editor.x=0
 class.Battlefield.superclass=greenfoot.World
 target2.naviview.expanded=true
 target2.name=Ship
@@ -32,7 +32,7 @@ target3.typeParameters=
 target1.name=AI
 target3.name=Battlefield
 target2.typeParameters=
-target3.editor.width=900
+target3.editor.width=1440
 mainWindow.width=1440
 target1.typeParameters=
 class.Grid.superclass=greenfoot.World
@@ -46,7 +46,7 @@ target1.width=80
 mainWindow.height=828
 target3.width=90
 mainWindow.x=0
-target3.editor.height=700
+target3.editor.height=828
 target3.showInterface=false
 target2.type=ClassTarget
 world.lastInstantiated=Battlefield
