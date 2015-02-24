@@ -65,6 +65,8 @@ public void attack(){
     String firingcode = Greenfoot.ask("Input firing code");
     int Ycode = Integer.parseInt(firingcode.substring(1)) - 1;
     int Xcode = charToInt(firingcode);
+    if (Ycode == -1)
+            Ycode = 9;
     checkLocation(Xcode, Ycode);
     for (int y = 0; y< 10; y++){
         for (int x=0; x<10; x++){
@@ -84,25 +86,24 @@ public void attack(){
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
 public void checkLocation(int x, int y){
-    GreenfootSound miss = new GreenfootSound("sadTrombome.wav");
     char placeholder = grid1 [y][x];
     switch (placeholder){
         case 'e':
             grid1[y][x] = 'm';
-            miss.play();
+            Greenfoot.playSound("sadTrombone.wav");
             this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create miss obj in world
             break;
         case 'h':
-            miss.play();
+            Greenfoot.playSound("sadTrombone.wav");
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 'm':
-            miss.play();
+            Greenfoot.playSound("sadTrombone.wav");
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
@@ -234,8 +235,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
 public void checkVictory()
 {
     if (p1Score == 5){
-        GreenfootSound victory = new GreenfootSound("Ta_Da.wav");
-        victory.play();
+        Greenfoot.playSound("Ta_Da.wav");
         this.showText("You Won!", this.getWidth()/2, this.getHeight()/2);
         Greenfoot.delay(20);
         Greenfoot.stop();
@@ -325,6 +325,7 @@ public static void setGrid(int gridNum, int y, int x, char fill)
         grid2[y][x] = fill;
 }
 
+//unimplimented, used for AI
 public char getElementAt(int num, int x, int y)
 {
     if (num==1)
@@ -333,6 +334,7 @@ public char getElementAt(int num, int x, int y)
     return grid2[y][x];
 }
 
+//developer method, prints out the grid1 array in a console window
 public void printGrid()
 {
     System.out.println("1234567890");
@@ -344,6 +346,7 @@ public void printGrid()
     }
 }
 
+//creates the ships
 private void displayShips()
 {
     Submarine = new Ship(3,'s');
@@ -352,6 +355,8 @@ private void displayShips()
     Carrier = new Ship(5, 'c');
     Destroyer = new Ship(3, 'd');
 }
+
+//creates ship squares in the environment
 private void showShips()
 {
     for (int y = 0; y< 10; y++){
