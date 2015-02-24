@@ -16,6 +16,7 @@ public class Ship extends Actor
     private String endpt1;
     private char type; //will fill the array at ship's location
     private int Ycode, Xcode;
+    private int orientation;
     public Ship (int length, char shiptype)
     {
         this.shipLength = length;
@@ -44,7 +45,7 @@ public class Ship extends Actor
         Xcode = Integer.parseInt(endpt1.substring(1)) - 1;
         Ycode = Battlefield.charToInt(endpt1);
         // ____________ need to create arrow image at endpt1
-        int orientation = 0;
+        orientation = 0;
         // 0=up 1=right 2=down 3=left
         //rotate left and right by 90 degrees until position is set with enter
         GreenfootImage arrow = new GreenfootImage("black-arrow-md.png");
@@ -56,19 +57,19 @@ public class Ship extends Actor
         switch (orientation){
             case 0:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Xcode, Ycode + t, type);
+                Battlefield.setGrid(1, Ycode, Xcode + t, type);
                 break;
             case 1:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Xcode + t, Ycode, type);
+                Battlefield.setGrid(1, Ycode + t, Xcode, type);
                 break;
             case 2:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Xcode, Ycode - t, type);
+                Battlefield.setGrid(1, Ycode, Xcode - t, type);
                 break;
             case 3:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Xcode - t, Ycode, type);
+                Battlefield.setGrid(1, Ycode - t, Xcode, type);
                 break;
             default:
                 break;

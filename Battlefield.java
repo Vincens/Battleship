@@ -292,9 +292,9 @@ public static void incrementScore()
 public static void setGrid(int gridNum, int x, int y, char fill)
 {
     if (gridNum == 1)
-        grid1[x][y] = fill;
+        grid1[y][x] = fill;
     if (gridNum == 2)
-        grid2[x][y] = fill;
+        grid2[y][x] = fill;
 }
 
 public char getElementAt(int num, int x, int y)
