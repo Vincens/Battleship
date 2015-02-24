@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.params=health\ shiptype
+comment0.params=length\ shiptype
 comment0.target=Ship(int,\ char)
-comment1.params=health\ player\ shiptype
+comment1.params=length\ player\ shiptype
 comment1.target=Ship(int,\ int,\ char)
 comment2.params=
 comment2.target=void\ placement()
