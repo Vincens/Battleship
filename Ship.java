@@ -27,7 +27,7 @@ public class Ship extends Actor
         this.sunk = false;
     }
     
-    public Ship (int length, int player, char shiptype)
+    public Ship (int length, int player, char shiptype, int x, int y)
     {
         this.shipLength = length;
         this.shipHealth = length;
@@ -36,6 +36,7 @@ public class Ship extends Actor
         GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
         this.setImage(Ship);
         this.sunk = false;
+        super.setLocation(x,y);
     }
       
     public void placement()

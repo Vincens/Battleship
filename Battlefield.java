@@ -12,11 +12,7 @@ private static char[][] grid1;
 private static  char[][] grid2;
 private static int p1Score;
 private static int p2Score;
-Ship Submarine = new Ship(3, 's');
-Ship Patrol = new Ship(2, 'p');
-Ship Battleship = new Ship(4, 'b');  
-Ship Carrier = new Ship(5, 'c');
-Ship Destroyer = new Ship(3, 'd');
+public Ship Submarine, Patrol, Battleship, Carrier, Destroyer;
 //constructor
 public Battlefield()
 {    
@@ -27,6 +23,7 @@ public Battlefield()
         p2Score = 0;        
         grid1 = createGrid();
         grid2 = createGrid();
+        displayShips();
         //run the placement method to fill grid array with ships based on user input
 }
 public void playGame()
@@ -301,6 +298,14 @@ public void printGrid()
         }
         System.out.println();
     }
+}
+private void displayShips()
+{
+    Submarine = new Ship(3, 1, 's', 50, 300);
+    Patrol = new Ship(2, 1, 'p', 110, 300);
+    Battleship = new Ship(4, 1, 'b', 170, 300);  
+    Carrier = new Ship(5, 1, 'c', 230, 300);
+    Destroyer = new Ship(3, 1, 'd' , 290, 300);   
 }
 /* values for char array:
     e empty
