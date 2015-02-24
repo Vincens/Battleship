@@ -84,21 +84,25 @@ public void attack(){
 //changes array, hits ship, prints result, creates hit and miss objects
 //we'll  probably want to move the text boxes but I set them up in the middle of the screen for now
 public void checkLocation(int x, int y){
+    GreenfootSound miss = new GreenfootSound("sadTrombome.wav");
     char placeholder = grid1 [y][x];
     switch (placeholder){
         case 'e':
             grid1[y][x] = 'm';
+            miss.play();
             this.showText("Miss",this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             //create miss obj in world
             break;
         case 'h':
+            miss.play();
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
             break;
         case 'm':
+            miss.play();
             this.showText("Miss", this.getWidth()/2, this.getHeight()/2);
             Greenfoot.delay(15);
             this.showText("",this.getWidth()/2, this.getHeight()/2);
@@ -230,6 +234,8 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
 public void checkVictory()
 {
     if (p1Score == 5){
+        GreenfootSound victory = new GreenfootSound("Ta_Da.wav");
+        victory.play();
         this.showText("You Won!", this.getWidth()/2, this.getHeight()/2);
         Greenfoot.delay(20);
         Greenfoot.stop();

@@ -92,6 +92,8 @@ public class Ship extends Actor
     
     public void hit()
     {
+        GreenfootSound hit = new GreenfootSound("Shotgun.wav");
+        hit.play();
         this.shipHealth--;
         checkSunk();
     }
