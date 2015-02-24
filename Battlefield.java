@@ -290,6 +290,15 @@ public static void setGrid(int gridNum, int x, int y, char fill)
     if (gridNum == 2)
         grid2[x][y] = fill;
 }
+
+public char[][] getGrid(int num)
+{
+    if (num==1)
+    return grid1;
+    else
+    return grid2;
+}
+
 public void printGrid()
 {
     for (int row = 0; row < 10; row++){
@@ -299,6 +308,7 @@ public void printGrid()
         System.out.println();
     }
 }
+
 private void displayShips()
 {
     Submarine = new Ship(3,'s');
