@@ -1,10 +1,11 @@
+import greenfoot.*;
 /**
  * Write a description of class AI here.
  * 
  * @author PeterB BenL
  * @version 1.0
  */
-public class AI  
+public class AI
 {
     //mode for AI to search for a new ship
    //picks 10 random potential shots. Uses primitive probability density algorithms to determine best shot to take
@@ -21,15 +22,16 @@ public class AI
    
    //finds larges ship still on board and finds how many instances of that ship could exist in the square,
    //returns that number
+   /**
    public int checkDensity()
    {
-        
    }
-   
+   **/
    //returns largest ship still on board
+   /**
    public int getLargest()
    {
-        if (!Carrier.isSunk())
+        if (!(Carrier.isSunk()))
             return 5;
         else if (!Battleship.isSunk())
             return 4;
@@ -40,6 +42,7 @@ public class AI
         else
             return 0;
    }
+   **/
    
    
    public void pickShot()

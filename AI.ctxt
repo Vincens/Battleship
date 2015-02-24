@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.params=
-comment0.target=AI()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ AI\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-numComments=2
+comment0.target=void\ seek()
+comment1.params=
+comment1.target=void\ destroy()
+comment2.params=
+comment2.target=void\ pickShot()
+comment2.text=\n\ \ \ public\ int\ getLargest()\n\ \ \ {\n\ \ \ \ \ \ \ \ if\ (\!(Carrier.isSunk()))\n\ \ \ \ \ \ \ \ \ \ \ \ return\ 5;\n\ \ \ \ \ \ \ \ else\ if\ (\!Battleship.isSunk())\n\ \ \ \ \ \ \ \ \ \ \ \ return\ 4;\n\ \ \ \ \ \ \ \ else\ if\ (\!Submarine.isSunk()\ ||\ \!Destroyer.isSunk())\n\ \ \ \ \ \ \ \ \ \ \ \ return\ 3;\n\ \ \ \ \ \ \ \ else\ if\ (\!Patrol.isSunk())\n\ \ \ \ \ \ \ \ \ \ \ \ return\ 2;\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ return\ 0;\n\ \ \ }\n
+numComments=3

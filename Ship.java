@@ -41,8 +41,8 @@ public class Ship extends Actor
     public void placement()
     {
         endpt1 = Greenfoot.ask("Input coordinate: ");
-        Ycode = Integer.parseInt(endpt1.substring(1)) - 1;
-        Xcode = Battlefield.charToInt(endpt1);
+        Xcode = Integer.parseInt(endpt1.substring(1)) - 1;
+        Ycode = Battlefield.charToInt(endpt1);
         // ____________ need to create arrow image at endpt1
         int orientation = 0;
         // 0=up 1=right 2=down 3=left
@@ -50,21 +50,7 @@ public class Ship extends Actor
         GreenfootImage arrow = new GreenfootImage("black-arrow-md.png");
         this.setImage(arrow);
         this.setLocation(this.placeX(), this.placeY());
-        /**while (!Greenfoot.isKeyDown("enter")){//needs to check for collisions and check boundaries
-            if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
-                orientation--;
-                if (orientation < 0)
-                    orientation = 3;
-                arrow.rotate(-90);
-            }
-            if (Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")){
-                orientation++;
-                if (orientation > 3)
-                    orientation = 0;
-                arrow.rotate(90);
-            }
-        }
-        **/
+        orientation = Integer.parseInt(Greenfoot.ask("Input orientation: (0 = up, 1 = right, 2 = down, 3 = left)"));
         //fills grid1 array with type elements at the location of the ship
         switch (orientation){
             case 0:
@@ -115,11 +101,11 @@ public class Ship extends Actor
     
     private int placeX()
     {
-        return (75 + 52*Ycode);
+        return (81 + 54*Xcode);
     }
     private int placeY()
     {
-        return (600 - 50*Xcode);
+        return (81 + 55*Ycode);
     }
 }
 
