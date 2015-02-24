@@ -293,11 +293,11 @@ public static void setGrid(int gridNum, int x, int y, char fill)
     if (gridNum == 2)
         grid2[x][y] = fill;
 }
-public void printGrid(char[][] grid)
+public void printGrid()
 {
     for (int row = 0; row < 10; row++){
         for (int column=0; column<10; column++){
-            System.out.print(grid[row][column]);
+            System.out.print(grid1[row][column]);
         }
         System.out.println();
     }
