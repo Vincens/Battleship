@@ -180,6 +180,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
     boolean result = false;
     switch (direction){
         case 0://up
+            result = false;
             for (int t = 0; t<length; t++){
                 if (grid1[y-t][x] != 'e'){
                     result = true;
@@ -187,6 +188,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
              }
             return result;
         case 1://right
+            result = false;
             for (int t = 0; t<length; t++){
                 if (grid1[y][x+t] != 'e'){
                     result = true;
@@ -194,6 +196,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
              }
             return result;
         case 2://down
+            result = false;
             for (int t = 0; t<length; t++){
                 if (grid1[y+t][x] != 'e'){
                     result = true;
@@ -201,6 +204,7 @@ public static boolean checkOverlap(int direction, int x, int y, int length)
              }
             return result;
         case 3://left
+            result = false;
             for (int t = 0; t<length; t++){
                 if (grid1[y][x-t] != 'e'){
                     result = true;
