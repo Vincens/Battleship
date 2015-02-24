@@ -115,11 +115,11 @@ public class Ship extends Actor
     
     private int placeX()
     {
-        return (50 + 50*Ycode);
+        return (75 + 52*Ycode);
     }
     private int placeY()
     {
-        return (500 - 50*Xcode);
+        return (600 - 50*Xcode);
     }
 }
 

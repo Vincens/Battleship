@@ -306,7 +306,11 @@ private void displayShips()
     Battleship = new Ship(4, 'b');  
     Carrier = new Ship(5, 'c');
     Destroyer = new Ship(3, 'd');
-    addObject(Submarine, 60, 300);
+    addObject(Submarine, 82, 300);
+    addObject(Patrol, 132, 300);
+    addObject(Battleship, 182, 300);
+    addObject(Carrier, 232, 300);
+    addObject(Destroyer, 282, 300);
 }
 /* values for char array:
     e empty
