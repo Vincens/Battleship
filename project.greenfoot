@@ -1,8 +1,8 @@
 #Greenfoot properties
-#Mon Feb 23 07:37:45 EST 2015
+#Mon Feb 23 10:52:42 EST 2015
 class.Battlefield.superclass=greenfoot.World
-target2.name=Battlefield
 target2.naviview.expanded=true
+target2.name=Battlefield
 target2.editor.height=700
 dependency1.from=Battlefield
 target2.showInterface=false
@@ -10,8 +10,8 @@ class.Ship.superclass=greenfoot.Actor
 target1.editor.width=1440
 target1.type=ClassTarget
 target2.y=10
-package.numTargets=2
 target2.x=160
+package.numTargets=2
 target1.height=50
 dependency2.type=UsesDependency
 target1.y=10
@@ -38,8 +38,8 @@ target2.type=ClassTarget
 world.lastInstantiated=Battlefield
 dependency1.type=UsesDependency
 target2.editor.y=23
-target2.editor.x=255
 version=2.7.0
+target2.editor.x=255
 package.numDependencies=2
 project.charset=UTF-8
 target2.editor.width=900
