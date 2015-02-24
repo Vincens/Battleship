@@ -31,10 +31,10 @@ public void playGame()
     this.showText("Please place a Submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Submarine.placement();
-    /**
     this.showText("Please place a Patrol (2x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Patrol.placement();
+    /**
     this.showText("Please place a Battleship (4x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Battleship.placement();
