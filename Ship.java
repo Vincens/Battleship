@@ -44,6 +44,8 @@ public class Ship extends Actor
         endpt1 = Greenfoot.ask("Input coordinate: ");
         Xcode = Integer.parseInt(endpt1.substring(1)) - 1;
         Ycode = Battlefield.charToInt(endpt1);
+        if (Xcode == 0)
+            Xcode = 9;
         // ____________ need to create arrow image at endpt1
         orientation = 0;
         // 0=up 1=right 2=down 3=left
@@ -54,29 +56,31 @@ public class Ship extends Actor
         String input = Greenfoot.ask("Input orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
         orientation = Integer.parseInt(input);
         //fills grid1 array with type elements at the location of the ship
+        while (Battlefield.checkBoundaries(orientation, Xcode, Ycode, this.shipLength)){
+            input = Greenfoot.ask("Out of Bounds, please reinput orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
+            orientation = Integer.parseInt(input);
+        }
         switch (orientation){
             case 0:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Ycode, Xcode + t, type);
-                break;
+                    Battlefield.setGrid(1, Xcode, Ycode - t, type);
+            break;
             case 1:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Ycode + t, Xcode, type);
-                break;
+                    Battlefield.setGrid(1, Xcode + t, Ycode, type);
+            break;
             case 2:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Ycode, Xcode - t, type);
-                break;
+                    Battlefield.setGrid(1, Xcode, Ycode + t, type);
+            break;
             case 3:
                 for (int t = 0; t < this.shipHealth; t++)
-                Battlefield.setGrid(1, Ycode - t, Xcode, type);
-                break;
+                    Battlefield.setGrid(1, Xcode - t, Ycode, type);
+            break;
             default:
-                break;
+            break;
         }
-        //_____ need to create the actual ship image at the proper location
-        //maybe find endpt2 then create image at midpt?
-    }
+}
     
     public void hit()
     {

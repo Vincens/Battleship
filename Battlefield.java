@@ -142,44 +142,38 @@ public void checkLocation(int x, int y){
             break;
     }
 }
-/**
+
 //returns true if the ship will run off the edge of the grid
 //called on in placement() in ship class
-public boolean checkBoundaries(int direction, int x, int y, int length)
+public static boolean checkBoundaries(int direction, int x, int y, int length)
 {
     switch (direction){
-        case 0:
-            if (y + length > 10)
+        case 0://up
+            if (y - length < 0)
                 return true;
             else
                 return false;
-            break;
-        
-        case 1:
+        case 1://right
             if (x + length > 10)
                 return true;
             else 
                 return false;
-            break;
-        case 2:
-            if (y - length < 0)
+        case 2://down
+            if (y + length > 10)
                 return true;
             else 
                 return false;
-            break;
-        case 3:
+        case 3://left
             if (x - length < 0)
                 return true;
             else 
                 return false;
-            break;
         default:
                 return false;
-            break;
         
     }
 }
-
+/**
 //checks grid array where ship will be placed to check for existing ships
 //returns true if overlap exists
 public boolean checkOverlap(int direction, int x, int y, int length)
@@ -289,7 +283,7 @@ public static void incrementScore()
 
 //sets grid element
 //called in placement method of ship class
-public static void setGrid(int gridNum, int x, int y, char fill)
+public static void setGrid(int gridNum, int y, int x, char fill)
 {
     if (gridNum == 1)
         grid1[y][x] = fill;
