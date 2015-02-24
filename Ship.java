@@ -50,7 +50,8 @@ public class Ship extends Actor
         GreenfootImage arrow = new GreenfootImage("black-arrow-md.png");
         this.setImage(arrow);
         this.setLocation(this.placeX(), this.placeY());
-        orientation = Integer.parseInt(Greenfoot.ask("Input orientation: (0 = up, 1 = right, 2 = down, 3 = left)"));
+        String input = Greenfoot.ask("Input orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
+        orientation = Integer.parseInt(input);
         //fills grid1 array with type elements at the location of the ship
         switch (orientation){
             case 0:
