@@ -293,12 +293,12 @@ public static void setGrid(int gridNum, int x, int y, char fill)
         grid2[x][y] = fill;
 }
 
-public char[][] getGrid(int num)
+public char getElementAt(int num, int x, int y)
 {
     if (num==1)
-    return grid1;
+    return grid1[y][x];
     else
-    return grid2;
+    return grid2[y][x];
 }
 
 public void printGrid()
