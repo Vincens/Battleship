@@ -19,13 +19,7 @@ public class AI
        
    }
    
-   //finds larges ship still on board and finds how many instances of that ship could exist in the square,
-   //returns that number
-   /**
-   public int checkDensity()
-   {
-   }
-   **/
+   
    //returns largest ship still on board
    /**
    public int getLargest()
