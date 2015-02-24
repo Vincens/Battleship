@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Feb 23 20:55:45 EST 2015
+#Mon Feb 23 21:01:16 EST 2015
 target3.editor.y=23
 target3.editor.x=0
 class.Battlefield.superclass=greenfoot.World
@@ -43,7 +43,7 @@ dependency2.from=Ship
 target2.width=80
 mainWindow.y=23
 target1.width=80
-mainWindow.height=828
+mainWindow.height=830
 target3.width=90
 mainWindow.x=0
 target3.editor.height=828
