@@ -11,6 +11,7 @@ public class Ship extends Actor
 {
     private int shipHealth; // i.e. number of unhit squares in the ship
     private int shipLength;
+    private boolean isSunk;
     private int owner;
     private String endpt1;
     private char type; //will fill the array at ship's location
@@ -22,6 +23,7 @@ public class Ship extends Actor
         this.type = shiptype;
         GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
         this.setImage(Ship);
+        this.isSunk = false;
     }
     
     public Ship (int length, int player, char shiptype)
@@ -32,6 +34,7 @@ public class Ship extends Actor
         this.owner = player;
         GreenfootImage Ship = new GreenfootImage("ShipPlaceholder.png");
         this.setImage(Ship);
+        this.isSunk = false;
     }
       
     public void placement()
@@ -99,6 +102,7 @@ public class Ship extends Actor
     private void checkSunk()
     {
         if (this.shipHealth == 0)
+            this.isSunk = true;
             Battlefield.incrementScore();
     }
     
