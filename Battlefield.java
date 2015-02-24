@@ -31,6 +31,7 @@ public void playGame()
     this.showText("Please place a Submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Submarine.placement();
+    /**
     this.showText("Please place a Patrol (2x1)",this.getWidth()/2, this.getHeight()/2);
     Greenfoot.delay(10);
     Patrol.placement();
@@ -44,6 +45,7 @@ public void playGame()
     Greenfoot.delay(10);
     Destroyer.placement();
     this.showText("",this.getWidth()/2, this.getHeight()/2);
+    **/
 }
 //method for creating the array, so we can call it twice
 public char[][] createGrid()
@@ -301,9 +303,10 @@ public char[][] getGrid(int num)
 
 public void printGrid()
 {
+    System.out.println("1234567890");
     for (int row = 0; row < 10; row++){
         for (int column=0; column<10; column++){
-            System.out.print(grid1[row][column]);
+            System.out.print(grid1[column][row]);
         }
         System.out.println();
     }
@@ -313,7 +316,7 @@ private void displayShips()
 {
     Submarine = new Ship(3,'s');
     Patrol = new Ship(2, 'p');
-    Battleship = new Ship(4, 'b');  
+    Battleship = new Ship(4, 'b');
     Carrier = new Ship(5, 'c');
     Destroyer = new Ship(3, 'd');
     addObject(Submarine, 82, 300);
