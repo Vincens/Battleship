@@ -31,11 +31,20 @@ public Battlefield()
 }
 public void playGame()
 {
-    System.out.println("Place a submarine (3x1)");
+    this.showText("Please place a Submarine (3x1)",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(10);
     Submarine.placement();
+    this.showText("Please place a Patrol (2x1)",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(10);
     Patrol.placement();
+    this.showText("Please place a Battleship (4x1)",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(10);
     Battleship.placement();
+    this.showText("Please place a Carrier (5x1)",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(10);
     Carrier.placement();
+    this.showText("Please place a Destroyer (3x1)",this.getWidth()/2, this.getHeight()/2);
+    Greenfoot.delay(10);
     Destroyer.placement();
 }
 //method for creating the array, so we can call it twice
