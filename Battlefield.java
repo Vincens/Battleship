@@ -173,31 +173,46 @@ public static boolean checkBoundaries(int direction, int x, int y, int length)
         
     }
 }
-/**
 //checks grid array where ship will be placed to check for existing ships
 //returns true if overlap exists
-public boolean checkOverlap(int direction, int x, int y, int length)
+public static boolean checkOverlap(int direction, int x, int y, int length)
 {
+    boolean result = false;
     switch (direction){
-        case 0:
-            
-            break;
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-        case 3:
-            
-            break;
+        case 0://up
+            for (int t = 0; t<length; t++){
+                if (grid1[y+t][x] != 'e'){
+                    result = true;
+                }
+             }
+            return result;
+        case 1://right
+            for (int t = 0; t<length; t++){
+                if (grid1[y][x+t] != 'e'){
+                    result = true;
+                }
+             }
+            return result;
+        case 2://down
+            for (int t = 0; t<length; t++){
+                if (grid1[y-t][x] != 'e'){
+                    result = true;
+                }
+             }
+            return result;
+        case 3://left
+            for (int t = 0; t<length; t++){
+                if (grid1[y][x-t] != 'e'){
+                    result = true;
+                }
+             }
+            return result;
         default:
-            return false;
-            break;
+            return result;
         
     }
 }
-**/
+
 //called on in checkSunk() in ship class
 public void checkVictory()
 {

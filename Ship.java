@@ -44,7 +44,7 @@ public class Ship extends Actor
         endpt1 = Greenfoot.ask("Input coordinate: ");
         Xcode = Integer.parseInt(endpt1.substring(1)) - 1;
         Ycode = Battlefield.charToInt(endpt1);
-        if (Xcode == 0)
+        if (Xcode == -1)
             Xcode = 9;
         // ____________ need to create arrow image at endpt1
         orientation = 0;
@@ -54,12 +54,18 @@ public class Ship extends Actor
         this.setImage(arrow);
         this.setLocation(this.placeX(), this.placeY());
         String input = Greenfoot.ask("Input orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
-        orientation = Integer.parseInt(input);
-        //fills grid1 array with type elements at the location of the ship
+        orientation = Integer.parseInt(input);  
+        //ensures ship stays in boundaries of grid
         while (Battlefield.checkBoundaries(orientation, Xcode, Ycode, this.shipLength)){
             input = Greenfoot.ask("Out of Bounds, please reinput orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
             orientation = Integer.parseInt(input);
         }
+        //ensure no ships overlap
+        while (Battlefield.checkOverlap(orientation, Xcode, Ycode, this.shipLength)){
+            input = Greenfoot.ask("Overlap, please reinput orientation: (0 = up, 1 = right, 2 = down, 3 = left)");
+            orientation = Integer.parseInt(input);
+        }
+        //fills grid1 array with type elements at the location of the ship
         switch (orientation){
             case 0:
                 for (int t = 0; t < this.shipHealth; t++)
