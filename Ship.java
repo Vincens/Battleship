@@ -100,6 +100,11 @@ public class Ship extends Actor
         return this.shipHealth;
     }
     
+    public boolean isSunk()
+    {
+        return this.sunk;
+    }
+    
     private void checkSunk()
     {
         if (this.shipHealth == 0)
