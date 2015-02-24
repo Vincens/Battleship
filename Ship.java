@@ -15,6 +15,7 @@ public class Ship extends Actor
     private int owner;
     private String endpt1;
     private char type; //will fill the array at ship's location
+    private int Ycode, Xcode;
     public Ship (int length, char shiptype)
     {
         this.shipLength = length;
@@ -40,15 +41,15 @@ public class Ship extends Actor
     public void placement()
     {
         endpt1 = Greenfoot.ask("Input coordinate: ");
-        int Ycode = Integer.parseInt(endpt1.substring(1)) - 1;
-        int Xcode = Battlefield.charToInt(endpt1);
+        Ycode = Integer.parseInt(endpt1.substring(1)) - 1;
+        Xcode = Battlefield.charToInt(endpt1);
         // ____________ need to create arrow image at endpt1
         int orientation = 0;
         // 0=up 1=right 2=down 3=left
         //rotate left and right by 90 degrees until position is set with enter
         GreenfootImage arrow = new GreenfootImage("black-arrow-md.png");
         this.setImage(arrow);
-        this.setLocation(50,50);
+        this.setLocation(this.placeX(), this.placeY());
         /**while (!Greenfoot.isKeyDown("enter")){//needs to check for collisions and check boundaries
             if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
                 orientation--;
@@ -112,5 +113,13 @@ public class Ship extends Actor
             Battlefield.incrementScore();
     }
     
+    private int placeX()
+    {
+        return (50 + 50*Ycode);
+    }
+    private int placeY()
+    {
+        return (500 - 50*Xcode);
+    }
 }
 
